@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "target": "ESNext",
+    "lib": ["esnext", "dom"],  // Ensure 'dom' is included
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "skipLibCheck": true,
+    "strict": true
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
+
+
+// {
+//   "compilerOptions": {
+//     "module": "CommonJS",                        
+//     "target": "ESNext",                          // Target modern JavaScript (ESNext)
+//     "moduleResolution": "node",                  // Resolves modules using Node.js resolution algorithm
+//     "experimentalDecorators": true,              // Enable decorators
+//     "emitDecoratorMetadata": true,               // Required for NestJS decorators to work
+//     "outDir": "./dist",                          // Output directory for compiled files
+//     "rootDir": "./src",                          // Root directory of source files
+//     "esModuleInterop": true,                     // Enables default imports from CommonJS modules
+//     "skipLibCheck": true,                        // Skips type checking of declaration files
+//     "strict": true,                              // Enable strict type-checking options
+//     "resolveJsonModule": true,                   // Allow importing JSON modules
+//     "noImplicitAny": true,                       // Raise an error on variables with an implicit "any" type
+//     "noUnusedLocals": true,                      // Report unused local variables
+//     "noUnusedParameters": true                   // Report unused function parameters
+//   },
+//   "include": [
+//     "src/**/*.ts"
+//   ],
+//   "exclude": [
+//     "node_modules"
+//   ]
+// }

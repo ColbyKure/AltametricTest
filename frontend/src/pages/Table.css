@@ -1,0 +1,100 @@
+/* Table container */
+.table-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  /* Table layout */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  /* Table header style */
+  th {
+    padding: 12px;
+    text-align: left;
+    background-color: #f4f4f4;
+    border-bottom: 2px solid #ddd;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Table row style */
+  td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+  }
+  
+  /* Table row hover effect */
+  tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Pagination controls at the top */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Adds space below the pagination */
+    padding: 10px 0;
+    background-color: #007BFF;  /* Blue background */
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style for pagination buttons */
+  .pagination button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: #ffffff;
+    color: #007BFF; /* Blue text */
+    border: 2px solid #007BFF; /* Blue border */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  /* Hover effect for pagination buttons */
+  .pagination button:hover {
+    background-color: #007BFF; /* Blue background on hover */
+    color: white;
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+  
+  /* Disabled pagination button */
+  .pagination button:disabled {
+    background-color: #ddd;
+    color: #999;
+    border: 2px solid #ddd;
+    cursor: not-allowed;
+  }
+  
+  /* Table actions button (View Details) */
+  button {
+    padding: 8px 16px;
+    background-color: #007BFF; /* Blue background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect for action buttons */
+  button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Center align the "View Details" button */
+  button:focus {
+    outline: none;
+  }
+  
