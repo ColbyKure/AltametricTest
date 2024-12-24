@@ -22,9 +22,6 @@ RUN npx prisma generate
 # Optionally, run database seeding
 RUN npm run seed  # Make sure your seed script is correctly defined in package.json
 
-# Optionally, run migrations
-# RUN npx prisma migrate deploy
-
 # Build the application
 RUN npm run build
 

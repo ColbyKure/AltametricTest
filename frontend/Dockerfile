@@ -4,7 +4,13 @@ FROM node:18 AS build
 WORKDIR /app
 
 # Copy package.json and package-lock.json
-COPY package.json package-lock.json ./
+COPY package.json package-lock.json ./ 
+
+# Clean the npm cache and reinstall dependencies
+RUN npm cache clean --force
+RUN rm -rf node_modules
+
+# Install dependencies (will regenerate package-lock.json if it's removed)
 RUN npm install
 
 # Copy the source code into the container
