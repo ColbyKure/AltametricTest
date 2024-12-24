@@ -77,6 +77,8 @@ To set up the project locally:
     docker-compose up --build
     ```
 
+1. Run migrations and build frontend if needed
+
 ---
 
 ## Localhost and Ports
