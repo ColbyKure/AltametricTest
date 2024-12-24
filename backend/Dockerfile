@@ -30,3 +30,4 @@ EXPOSE 5000
 
 # Start the backend server (use production environment)
 CMD ["npm", "run", "start:prod"]
+# CMD ["serve", "-s", "dist"]

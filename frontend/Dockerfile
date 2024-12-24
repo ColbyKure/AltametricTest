@@ -1,7 +1,7 @@
 # Step 1: Build the Vite application
 FROM node:18 AS build
 
-WORKDIR /app
+WORKDIR /frontend
 
 # Copy package.json and package-lock.json
 COPY package.json package-lock.json ./ 
@@ -23,7 +23,7 @@ RUN npm run build
 FROM nginx:alpine
 
 # Copy the build from the previous stage
-COPY --from=build /app/dist /usr/share/nginx/html
+COPY --from=build /frontend/dist /usr/share/nginx/html
 
 # Expose the port for Nginx
 EXPOSE 80

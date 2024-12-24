@@ -15,7 +15,7 @@ services:
 
   backend:
     build:
-      context: .  # Assuming the Dockerfile is in the root directory, adjust as needed
+      context: .
       dockerfile: Dockerfile
     container_name: backend-container
     ports:
@@ -24,7 +24,7 @@ services:
       - db
     entrypoint: /wait-for-it.sh db:5432 -- npm run start
     environment:
-      - DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}?schema=public  # Correct the DB URL
+      - DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}?schema=public
     networks:
       - backend
     healthcheck:
