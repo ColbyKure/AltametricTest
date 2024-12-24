@@ -1,6 +1,9 @@
 # Use official Node.js as a parent image
 FROM node:18
 
+# Install the PostgreSQL client (psql)
+RUN apt-get update && apt-get install -y postgresql-client
+
 # Set the working directory for the backend
 WORKDIR /backend
 
