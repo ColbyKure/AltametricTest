@@ -11,13 +11,25 @@ RUN npm install
 # Copy the backend source code
 COPY . .
 
+# Add wait-for-it to the backend Docker image
+RUN apt-get update && apt-get install -y curl
+RUN curl -o /wait-for-it.sh https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh
+RUN chmod +x /wait-for-it.sh
+
+# Generate Prisma client
 RUN npx prisma generate
-# RUN npx prisma migrate dev --name init
-# RUN tsc src/prisma/seed.ts
-# RUN node src/prisma/seed.js
+
+# Optionally, run database seeding
+RUN npm run seed  # Make sure your seed script is correctly defined in package.json
+
+# Optionally, run migrations
+# RUN npx prisma migrate deploy
+
+# Build the application
 RUN npm run build
 
-EXPOSE 5173
+# Expose port for backend
+EXPOSE 5000
 
-# Start the backend server
+# Start the backend server (use production environment)
 CMD ["npm", "run", "start:prod"]
